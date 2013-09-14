@@ -110,14 +110,16 @@ module.exports = function(grunt) {
 
         match.forEach(function(val, key) {
           if (grunt.file.isMatch(val.files, filepath)) {
+            var date = new Date, time = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+
             if (val.tasks && val.tasks.length) {
-              grunt.log.writeln("Change in '%s' triggers [%s]%s", filepath, val.tasks.join(", "), val.options.livereload ? " with livereload" : "");
+              grunt.log.writeln("%s Change in '%s' triggers [%s]%s", time, filepath, val.tasks.join(", "), val.options.livereload ? " with livereload" : "");
 
               var async = target ? "gaze:"+target : "gaze";
               grunt.task.run(val.tasks.concat([async]));
               callbacks[target || "*"]();
             } else {
-              grunt.log.writeln("Change in '%s' triggers livereload", filepath);
+              grunt.log.writeln("%s Change in '%s' triggers livereload", time, filepath);
             }
 
             if (val.options.livereload) {
