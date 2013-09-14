@@ -1,0 +1,13 @@
+{
+  "name": "grunt-gaze",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.4"
+  },
+  "dependencies": {
+    "gaze": "~0.4.1",
+    "ws": "~0.4.30",
+    "express": "~3.4.0"
+  }
+}
