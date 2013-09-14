@@ -50,6 +50,8 @@ module.exports = function(grunt) {
 
     // watch
     gaze(watch, function(err, watcher) {
+      if (err) return grunt.warn(err);
+
       this.on("all", function(event, absolute) {
         var filepath = path.relative(cwd, absolute);
 
