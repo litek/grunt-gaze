@@ -28,4 +28,30 @@ grunt.initConfig({
     }
   }
 });
+
+grunt.registerTask("default", ["less", "gaze"]);
+```
+## Server
+Also includes a simple execution wrapper for your development server
+
+```javascript
+grunt.initConfig({
+  "gaze-server": {
+    dev: {
+      args: "--harmony app.js",
+      env: {
+        NODE_PATH: process.cwd()
+      }
+    }
+  },
+
+  "gaze": {
+    server: {
+      files: ["app.js", "routes/**/*.js"],
+      tasks: ["gaze-server"]
+    }
+  }
+});
+
+grunt.registerTask("default", ["gaze-server", "gaze"]);
 ```
