@@ -32,11 +32,11 @@ grunt.initConfig({
 grunt.registerTask("default", ["less", "gaze"]);
 ```
 ## Server
-Also includes a simple execution wrapper for your development server
+Also includes a simple execution wrapper for your development server (gazed)
 
 ```javascript
 grunt.initConfig({
-  "gaze-server": {
+  gazed: {
     dev: {
       args: "--harmony app.js",
       env: {

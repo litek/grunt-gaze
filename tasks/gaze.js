@@ -7,7 +7,7 @@ var path = require("path"),
 module.exports = function(grunt) {
   var callbacks = {}, servers = {};
 
-  grunt.registerMultiTask("gaze-server", function(target) {
+  grunt.registerMultiTask("gazed", function(target) {
     var options = grunt.util._.defaults(this.data, {
       cmd: process.argv[0],
       args: [],
