@@ -1,9 +1,18 @@
 {
   "name": "grunt-gaze",
   "version": "0.1.0",
+  "author": "Ketil Albertsen <ketil@syscom.as>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/litek/grunt-gaze.git"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-jshint": "~0.6.4"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
   },
   "dependencies": {
     "gaze": "~0.4.1",
