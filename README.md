@@ -48,10 +48,10 @@ grunt.initConfig({
   "gaze": {
     server: {
       files: ["app.js", "routes/**/*.js"],
-      tasks: ["gaze-server"]
+      tasks: ["gazed"]
     }
   }
 });
 
-grunt.registerTask("default", ["gaze-server", "gaze"]);
+grunt.registerTask("default", ["gazed", "gaze"]);
 ```
