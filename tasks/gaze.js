@@ -110,7 +110,7 @@ module.exports = function(grunt) {
 
         match.forEach(function(val, key) {
           if (grunt.file.isMatch(val.files, filepath)) {
-            var date = new Date, time = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+            var date = new Date(), time = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
 
             if (val.tasks && val.tasks.length) {
               grunt.log.writeln("%s Change in '%s' triggers [%s]%s", time, filepath, val.tasks.join(", "), val.options.livereload ? " with livereload" : "");
